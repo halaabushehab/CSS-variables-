@@ -16,7 +16,30 @@
     <title>CSS variables</title>
 </head>
 <body>
-    
+    <style>
+     :root{
+         --base:#138140;
+        --spacing:10px;
+        --blur:10px; 
+    } 
+
+    img{
+        padding: var(--spacing) ;
+        background:var(--base) ;
+        filter:blur(var(--blur)) ;
+    }
+
+   .h1{
+    color: var(--base);    
+    }
+
+    </style>
+
+
+
+
+
+
 
     <h2> Update CSS Variable with  <span class="h1">
         JS
@@ -38,7 +61,6 @@ value="10" data-sizing="px"/>
 
     </div>
 
-
     <img src="c:\Users\Acer\Desktop\programmig\javascript_30_days\CSS-variables-\palestine.png"  height="600" >
 
 
@@ -46,6 +68,10 @@ value="10" data-sizing="px"/>
 
 
 
-    <script></script>
+
+
+    <script>
+
+    </script>
 </body>
 </html>
