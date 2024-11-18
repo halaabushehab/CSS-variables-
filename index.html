@@ -48,7 +48,7 @@
     <div class="controls">
 <label for="spacing" >Spacing:</label>
 <input id="spacing" type="range" name="spacing" min="10" max="200"
-value="10" data-sizing="px"/>
+value="10" data-sizing="px" data-cool="❤️"/>
 
 
 <label for="blur">Blur:</label>
@@ -57,7 +57,7 @@ value="10" data-sizing="px"/>
 
 
  <label for="base" >Base Color</label>
-<input id="base" type="color" name="base" value="#888">
+<input id="base" type="color" name="base" value="#138140">
 
     </div>
 
@@ -67,10 +67,26 @@ value="10" data-sizing="px"/>
 
 
 
-
-
-
     <script>
+ const inputs =$('.controls input');
+
+ function handleUpdate(){
+    const suffix= this.dataset.sizing || '';
+    $('html').css(`--${this.name}` ,$(this).val()+suffix);
+
+
+ }
+
+ inputs.each(function(){
+$(this).on('change',handleUpdate);
+ })
+
+ inputs.each(function(){
+$(this).on('mousemove',handleUpdate);
+
+ })
+
+
 
     </script>
 </body>
